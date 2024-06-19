@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>API demo</title>
+</head>
+<body>
+    <h1>API DEMO</h1>
+    <p>Hello World</p>
+    <a href="{{ url_for('guessNum') }}" target="_blank">Guess Number</a>
+    <!-- <p>{{ session_id }}</p> -->
+
+    <form action="{{ url_for('get_birth_year') }}" method="post">
+        <label for="birth_year">Birth Year</label>
+        <input type="text" name="birth_year" id="birth_year">
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age">
+
+        <input type="submit" value="Submit">
+
+        <p>{{ birth_year }}</p>
+
+    </form>
+</body>
+</html>
